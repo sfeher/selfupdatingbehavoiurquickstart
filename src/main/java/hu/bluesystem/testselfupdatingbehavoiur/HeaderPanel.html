@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+    <head>
+        <wicket:link>                                        
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/> 
+            <link href="css/styles.css" rel="stylesheet"/>  
+            <link href="companyresources/custom.css" rel="stylesheet"/>  
+        </wicket:link> 
+    </head>
+    <body>
+        <wicket:panel>            
+            <div class="row">
+                <div class="col-md-2 ">
+                    <div id="logo">                        
+                        <div id="logoinner">
+                            <img class="img img-responsive" src="companyresources/logo.png"></img>
+                        </div>
+                    </div>                    
+                </div>    
+                <div class="col-md-8">              
+                    <div class="row">
+                        <div class="col-md-12 centered portalheader">
+                            <h1 wicket:id="appname"></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 centered justifydown">
+                            <div wicket:id="maidatum" ></div>
+                            <div class="nevnap">
+                                <span wicket:id="nevnap_pre"></span>
+                                <span wicket:id="nevnap_text" class="nevnaphl"></span>
+                                <span wicket:id="nevnap_post"></span>
+                            </div> 
+                        </div>
+                    </div>
+
+                </div>                           
+                <div class="col-md-2">                       
+                    <div class="row">
+                        <div class="col-md-12">                                                       
+                            <div wicket:id="headercontainer" class="headercontainer">    
+                                <div class="statusbox">                                                
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <span wicket:id="username"></span>
+                                    <br/>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a href="#" wicket:id="preferenceslink"><span class="glyphicon glyphicon-cog preflink" wicket:id="preferences"></span></a>
+                                            <a href="#" wicket:id="logoutlink"><span class="glyphicon glyphicon-log-out logoutlink" wicket:id="label_logout"></span></a>   
+                                        </div>                               
+                                    </div>
+                                </div>
+                                <span wicket:id="sessionsize"></span>
+
+                            </div>           
+                        </div>
+                    </div>
+                    <div class="row centered">
+                        <div class="col-md-10">
+                            <div wicket:id="tocontainer" class="tocontainer">
+                            <span wicket:id="timeoutlabel"></span>
+                            <span wicket:id="timeout"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">                        
+                        <div class="col-md-12">                                                       
+                            <div wicket:id="notificationpanel" class="notificationpanel"></div>
+                        </div>
+                    </div>
+                </div>                  
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fright">
+                        <span wicket:id="jvlabel" class="jvselecttitle"></span>
+                        <select wicket:id="jv" class="jvselect input-sm"></select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cut -->
+        </wicket:panel>
+    </body>
+</html>
