@@ -8,65 +8,19 @@ package hu.bluesystem.testselfupdatingbehavoiur;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author sfeher
  */
-@Entity
-@Table(name = "HRP_APP_PROPERTIES")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "HrpAppProperties.findAll", query = "SELECT h FROM HrpAppProperties h"),
-    @NamedQuery(name = "HrpAppProperties.findByPropKey", query = "SELECT h FROM HrpAppProperties h WHERE h.propKey = :propKey"),
-    @NamedQuery(name = "HrpAppProperties.findByPropValue", query = "SELECT h FROM HrpAppProperties h WHERE h.propValue = :propValue"),
-    @NamedQuery(name = "HrpAppProperties.findByPropStatus", query = "SELECT h FROM HrpAppProperties h WHERE h.propStatus = :propStatus"),
-    @NamedQuery(name = "HrpAppProperties.findByCrd", query = "SELECT h FROM HrpAppProperties h WHERE h.crd = :crd"),
-    @NamedQuery(name = "HrpAppProperties.findByCru", query = "SELECT h FROM HrpAppProperties h WHERE h.cru = :cru"),
-    @NamedQuery(name = "HrpAppProperties.findByLmd", query = "SELECT h FROM HrpAppProperties h WHERE h.lmd = :lmd"),
-    @NamedQuery(name = "HrpAppProperties.findByLmu", query = "SELECT h FROM HrpAppProperties h WHERE h.lmu = :lmu")})
 public class HrpAppProperties implements Serializable {
     private static final long serialVersionUID = 1L;
-    @Id
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 400)
-    @Column(name = "PROP_KEY")
     private String propKey;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 4000)
-    @Column(name = "PROP_VALUE")
     private String propValue;
-    @Column(name = "PROP_STATUS")
     private String propStatus;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "CRD")
-    @Temporal(TemporalType.TIMESTAMP)
     private Date crd;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 200)
-    @Column(name = "CRU")
     private String cru;
-    @Column(name = "LMD")
-    @Temporal(TemporalType.TIMESTAMP)
     private Date lmd;
-    @Size(max = 200)
-    @Column(name = "LMU")
     private String lmu;
 
     public HrpAppProperties() {

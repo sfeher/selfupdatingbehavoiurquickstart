@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 
 import org.apache.wicket.model.AbstractReadOnlyModel;
 import org.apache.wicket.model.IModel;
-import org.hibernate.Query;
+
 
 /**
  * Általános FilteredDetectionDataProvider
@@ -26,7 +26,6 @@ public class HrpAppPropertiesDataProvider extends FilteredDetectionDataProvider<
     private  HrpAppProperties filter = new HrpAppProperties();
     private  List<HrpAppProperties> filtered;
     final private SortableDataProviderComparator comparator = new SortableDataProviderComparator();
-    private Query query;
     private String Q;
     List<HrpAppProperties> initlist;
     boolean voltfilter = Boolean.FALSE;
